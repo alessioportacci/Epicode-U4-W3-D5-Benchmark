@@ -59,6 +59,7 @@ namespace Epicode_U4_W3_D5_Benchmark
         {
             //Prendo l'articolo e lo rimuovo dal carrello
             Articolo articolo = Articolo.ArticoliList.Where((art) => art.ID == id).FirstOrDefault();
+            Totale -= articolo.Prezzo;
             Articoli.Remove(articolo);
 
             //Lo rendo di nuovo disponibile
